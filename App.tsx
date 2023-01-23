@@ -8,9 +8,10 @@ import ScreenA from './ScreenA';
 import ScreenB from './ScreenB';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
 
-const Tab = createMaterialBottomTabNavigator()
+const Tab = createMaterialTopTabNavigator()
 
 
 function App(): JSX.Element {
@@ -38,7 +39,7 @@ function App(): JSX.Element {
               color={color}
             />
           )},
-          tabBarLabel:false
+          // tabBarLabel:false
       })
     }
       >
@@ -46,7 +47,7 @@ function App(): JSX.Element {
         <Tab.Screen
         name='Screen_A'
         component={ScreenA}
-        options={{tabBarBadge: 3}}
+        // options={{tabBarBadge: 3}}
         />
         <Tab.Screen
         name='Screen_B'
